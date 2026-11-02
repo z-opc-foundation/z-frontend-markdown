@@ -1,0 +1,65 @@
+{
+  "name": "@yuku123/z-markdown-component",
+  "version": "0.1.0",
+  "description": "全仓 Markdown 渲染/编辑的单一真源 —— MarkdownLiveEditor(vditor) + NoteMarkdown(GFM+高亮+Mermaid)。2026-11-02 从 z-team 抽出，z-team / z-task 共用",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./style.css": "./dist/z-markdown-component.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "prepublishOnly": "vite build"
+  },
+  "peerDependencies": {
+    "@ant-design/icons": "^6.0.0",
+    "antd": "^6.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^9.1.0",
+    "rehype-highlight": "^7.0.2",
+    "remark-gfm": "^4.0.1",
+    "vditor": "^3.9.7"
+  },
+  "devDependencies": {
+    "@ant-design/icons": "^6.1.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "antd": "^6.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^9.1.0",
+    "rehype-highlight": "^7.0.2",
+    "remark-gfm": "^4.0.1",
+    "vite": "^6.2.6",
+    "vditor": "^3.9.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z-opc-foundation/z-markdown-component.git"
+  },
+  "bugs": {
+    "url": "https://github.com/z-opc-foundation/z-markdown-component/issues"
+  },
+  "homepage": "https://github.com/z-opc-foundation/z-markdown-component#readme",
+  "keywords": [
+    "react",
+    "markdown",
+    "vditor",
+    "mermaid",
+    "z-opc"
+  ],
+  "author": "yuku123",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}

@@ -1,0 +1,339 @@
+.wrap {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #fff;
+}
+
+.live {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    background: #fff;
+}
+
+.live:global(.vditor) {
+    border: none;
+    border-radius: 0;
+    height: 100%;
+    background: #fff;
+}
+
+.live :global(.vditor-toolbar) {
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff;
+    padding: 4px 28px !important;
+}
+
+.live :global(.vditor-content) {
+    min-height: 0;
+    background: #fff;
+}
+
+/* 覆盖 Vditor setPadding 写入的过大左右留白，铺满可用宽度 */
+.live :global(.vditor-ir) {
+    padding: 16px 28px !important;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.live :global(.vditor-reset) {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    max-width: none;
+    background: #fff;
+}
+
+.live :global(pre.vditor-reset),
+.live :global(pre.vditor-reset:focus) {
+    background: #fff !important;
+}
+
+.live :global(.vditor-reset h1) {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 16px 0 10px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 6px;
+}
+
+.live :global(.vditor-reset h2) {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0 8px;
+}
+
+.live :global(.vditor-reset h3) {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 12px 0 6px;
+}
+
+.live :global(.vditor-reset img) {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+/*
+ * 代码块：接近 Typora —— 平时只看高亮预览，点进去只改源码，避免源码+预览叠两层。
+ * Vditor IR 在 expand 时会同时露出 marker--pre 与 preview，这里做互斥。
+ */
+.live
+:global(
+    .vditor-ir__node[data-type="code-block"]:not(.vditor-ir__node--expand)
+      > .vditor-ir__marker.vditor-ir__marker--pre
+  ),
+.live
+:global(
+    .vditor-ir__node[data-type="code-block"]:not(.vditor-ir__node--expand)
+      > pre.vditor-ir__marker--pre
+  ) {
+    display: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.live
+:global(.vditor-ir__node--expand[data-type="code-block"] > .vditor-ir__preview),
+.live
+:global(
+    .vditor-ir__node--expand[data-type="math-block"] > .vditor-ir__preview
+  ) {
+    display: none !important;
+}
+
+.live :global(.vditor-ir__node[data-type="code-block"] > .vditor-ir__preview) {
+    cursor: text;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    background: #fafbfc;
+    padding: 12px 14px;
+    margin: 8px 0;
+}
+
+.live
+:global(
+    .vditor-ir__node[data-type="code-block"] > .vditor-ir__preview:hover
+  ) {
+    border-color: #1973cc;
+}
+
+.live
+:global(
+    .vditor-ir__node--expand[data-type="code-block"]
+      > .vditor-ir__marker--pre
+  ),
+.live
+:global(
+    .vditor-ir__node--expand[data-type="code-block"] > pre.vditor-ir__marker--pre
+  ) {
+    display: block !important;
+    height: auto !important;
+    overflow: auto !important;
+    margin: 8px 0 !important;
+    padding: 12px 14px !important;
+    border: 1px solid #d9d9d9 !important;
+    border-radius: 6px;
+    background: #f6f8fa;
+}
+
+/* Vditor 预览态 Mermaid 图自适应宽度 */
+.live :global(.vditor-ir__preview .language-mermaid),
+.live :global(.vditor-ir__preview .language-sequenceDiagram),
+.live :global(.vditor-ir__preview .language-sequence),
+.live :global(.vditor-ir__preview svg) {
+    max-width: 100%;
+}
+
+.mdToolbar {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    padding: 6px 28px;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.mdBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    padding: 0 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #333;
+}
+
+.mdBtn:hover {
+    background: #e8e8e8;
+}
+
+.mdSep {
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    margin: 0 4px;
+    background: #e0e0e0;
+}
+
+.textarea {
+    flex: 1;
+    min-height: 0;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 16px 28px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background: #fff;
+}
+
+.preview {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    padding: 16px 24px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.preview :global(h1) {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 16px 0 10px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 6px;
+}
+
+.preview :global(h2) {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0 8px;
+}
+
+.preview :global(h3) {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 12px 0 6px;
+}
+
+.preview :global(p) {
+    margin: 8px 0;
+}
+
+.preview :global(ul),
+.preview :global(ol) {
+    padding-left: 24px;
+    margin: 8px 0;
+}
+
+.preview :global(li) {
+    margin: 4px 0;
+}
+
+.preview :global(img) {
+    max-width: 100%;
+    border-radius: 6px;
+    margin: 8px 0;
+}
+
+.preview :global(pre) {
+    background: #f6f8fa;
+    border-radius: 6px;
+    padding: 12px;
+    overflow: auto;
+}
+
+.preview :global(code) {
+    font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 13px;
+}
+
+.preview :global(table) {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.preview :global(th),
+.preview :global(td) {
+    border: 1px solid #e8e8e8;
+    padding: 6px 12px;
+}
+
+.preview :global(th) {
+    background: #fafafa;
+    font-weight: 600;
+}
+
+.preview :global(blockquote) {
+    border-left: 4px solid #1973cc;
+    margin: 8px 0;
+    padding: 4px 12px;
+    color: #666;
+    background: #fafafa;
+}
+
+.preview :global(a) {
+    color: #1973cc;
+}
+
+.mermaid {
+    margin: 12px 0;
+    overflow-x: auto;
+    text-align: center;
+}
+
+.mermaid :global(svg) {
+    max-width: 100%;
+    height: auto;
+}
+
+.mermaidError {
+    margin: 12px 0;
+    padding: 12px 14px;
+    border: 1px solid #ffccc7;
+    border-radius: 6px;
+    background: #fff2f0;
+}
+
+.mermaidErrorTitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: #cf1322;
+    margin-bottom: 6px;
+}
+
+.mermaidErrorMsg {
+    margin: 0 0 8px;
+    font-size: 12px;
+    color: #a8071a;
+    white-space: pre-wrap;
+}
+
+.mermaidSource {
+    margin: 0;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+    background: #fafafa;
+    border-radius: 4px;
+    overflow: auto;
+}
