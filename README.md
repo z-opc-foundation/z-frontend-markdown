@@ -1,4 +1,4 @@
-# @yuku123/z-markdown-component
+# @yuku123/z-frontend-markdown
 
 全仓 Markdown 渲染 / 编辑的**单一真源**。
 
@@ -31,7 +31,7 @@
 ### 编辑器
 
 ```jsx
-import {MarkdownLiveEditor} from '@yuku123/z-markdown-component'
+import {MarkdownLiveEditor} from '@yuku123/z-frontend-markdown'
 
 <MarkdownLiveEditor
     mode="live"
@@ -46,7 +46,7 @@ import {MarkdownLiveEditor} from '@yuku123/z-markdown-component'
 ### 只读渲染
 
 ```jsx
-import {NoteMarkdown} from '@yuku123/z-markdown-component'
+import {NoteMarkdown} from '@yuku123/z-frontend-markdown'
 
 <NoteMarkdown>{markdownText}</NoteMarkdown>
 ```

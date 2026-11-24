@@ -1,5 +1,5 @@
 {
-  "name": "@yuku123/z-markdown-component",
+  "name": "@yuku123/z-frontend-markdown",
   "version": "0.1.0",
   "description": "全仓 Markdown 渲染/编辑的单一真源 —— MarkdownLiveEditor(vditor) + NoteMarkdown(GFM+高亮+Mermaid)。2026-11-02 从 z-team 抽出，z-team / z-task 共用",
   "type": "module",
@@ -7,7 +7,7 @@
   "module": "./dist/index.js",
   "exports": {
     ".": "./dist/index.js",
-    "./style.css": "./dist/z-markdown-component.css"
+    "./style.css": "./dist/z-frontend-markdown.css"
   },
   "files": [
     "dist"
@@ -43,12 +43,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/z-opc-foundation/z-markdown-component.git"
+    "url": "git+https://github.com/z-opc-foundation/z-frontend-markdown.git"
   },
   "bugs": {
-    "url": "https://github.com/z-opc-foundation/z-markdown-component/issues"
+    "url": "https://github.com/z-opc-foundation/z-frontend-markdown/issues"
   },
-  "homepage": "https://github.com/z-opc-foundation/z-markdown-component#readme",
+  "homepage": "https://github.com/z-opc-foundation/z-frontend-markdown#readme",
   "keywords": [
     "react",
     "markdown",

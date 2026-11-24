@@ -115,7 +115,7 @@ function safeDestroyVditor(box) {
 /**
  * Markdown 双模编辑器（vditor 即时预览 + 源码模式）。
  *
- * 全仓 Markdown 编辑的**单一真源**（@yuku123/z-markdown-component）。
+ * 全仓 Markdown 编辑的**单一真源**（@yuku123/z-frontend-markdown）。
  */
 export const MarkdownLiveEditor = forwardRef(function MarkdownLiveEditor(
     {

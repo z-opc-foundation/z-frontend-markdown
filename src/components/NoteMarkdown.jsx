@@ -61,7 +61,7 @@ const rehypePlugins = [
 /**
  * Markdown 只读渲染器：GFM + 代码高亮 + Mermaid。
  *
- * 全仓 Markdown 渲染的**单一真源**（@yuku123/z-markdown-component）。
+ * 全仓 Markdown 渲染的**单一真源**（@yuku123/z-frontend-markdown）。
  */
 export function NoteMarkdown({children, className}) {
     return (

@@ -1,5 +1,5 @@
 /**
- * @yuku123/z-markdown-component —— 全仓 Markdown 渲染 / 编辑的**单一真源**。
+ * @yuku123/z-frontend-markdown —— 全仓 Markdown 渲染 / 编辑的**单一真源**。
  *
  * 2026-11-02 随待办能力从 z-team 迁到 z-task 而抽出。
  *

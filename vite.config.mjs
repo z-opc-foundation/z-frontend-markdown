@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 /**
- * z-markdown-component 构建配置。
+ * z-frontend-markdown 构建配置。
  *
  * ⚠ external 用**函数式**判定（不是字符串数组）：
  *   `react-markdown` / `remark-gfm` / `rehype-highlight` / `highlight.js`
